@@ -1,0 +1,24 @@
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">name</th>
+			<th scope="col">type</th>
+			<th scope="col">description</th>
+            <th scope="col">edit</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		@for (course of courseList; track course.name; let i = $index) {
+			<tr>
+				<th scope="row">{{ i + 1 }}</th>
+				<td>{{ course.name }}</td>
+				<td>{{ course.type}}</td>
+				<td>{{ course.description}}</td>
+                <td><button (click)="edit(course.name)">Edit</button></td>
+			</tr>
+		}
+	</tbody>
+</table>
+
