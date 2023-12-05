@@ -36,9 +36,7 @@ export class CourseFormComponent {
             this.formCourse.controls['type'].setValue(course.type);
             this.formCourse.controls['description'].setValue(course.description);
         }
- 
-
-    })
+     })
   }
 })
   }

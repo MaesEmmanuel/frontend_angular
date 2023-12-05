@@ -9,20 +9,21 @@ import { Observable } from 'rxjs';
 export class CourseService {
 
   constructor(private http:HttpClient) { }
+  url : string = "https://localhost:7037/course";
 
   Post(course: Course){
-    return this.http.post("https://localhost:7037/course",course).subscribe();
+    return this.http.post(this.url,course).subscribe();
   }
 
   GetCourseList():Observable<Course[]>{
-    return this.http.get<Course[]>("https://localhost:7037/course");
+    return this.http.get<Course[]>(this.url);
   }
 
  // GetCoursebyId():Course{
- //   return this.http.get("https://localhost:7037/course",Course.id);
+ //   return this.http.get(this.url,Course.id);
   //}
 
   GetCourseByName(name:string){
-    return this.http.get<Course>(`https://localhost:7037/course/GetCourseByName?name=${name}`);
+    return this.http.get<Course>(`${this.url}/GetCourseByName?name=${name}`);
   }
 }
