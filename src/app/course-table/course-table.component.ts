@@ -26,7 +26,10 @@ ngOnInit () {
 edit(name:string){
   this.router.navigate(['./course-form',name]);
 }
-
+delete(name:string){
+  console.log(name);
+  this.courseService.DeleteCourseByName(name);
+}
 
 }
 

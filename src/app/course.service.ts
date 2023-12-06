@@ -26,4 +26,7 @@ export class CourseService {
   GetCourseByName(name:string){
     return this.http.get<Course>(`${this.url}/GetCourseByName?name=${name}`);
   }
+  DeleteCourseByName(name:string){
+    return this.http.delete(`${this.url}/DeleteCourseByName?name=${name}`);
+  }
 }
