@@ -11,6 +11,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CourseFormComponent } from './course-form/course-form.component';
 import { CourseTableComponent } from './course-table/course-table.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './auth/logout/logout.component';
 
 
 
@@ -20,7 +22,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     NavbarComponent,
     CourseFormComponent,
     CourseTableComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

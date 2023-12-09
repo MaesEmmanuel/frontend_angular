@@ -1,0 +1,32 @@
+<!-- <p>login works!</p> -->
+
+      
+<div class="container mt-3">
+ 
+    <div class="col-md-6 offset-md-3 mt-3" >
+     <div class="card">
+        <h4 class="card-header">Login</h4>
+        <div class="text-danger" *ngIf="errorMessage">{{errorMessage}}</div>
+        <div class="card-body">
+            {{userFormGroup.value | json}}
+            <form autocomplete="off" [formGroup]="userFormGroup" (ngSubmit)="handleLogin()">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" formControlName="username" class="form-control" autocomplete="enter your name"/>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" formControlName="password" class="form-control" autocomplete="enter your new-password" />
+                </div>
+                <div>
+                    <button  class="btn btn-primary" type="submit">
+                        Login
+                    </button>
+                    <a routerLink="../register" class="btn btn-link">Register</a>
+                </div>
+            </form>
+        </div>
+     </div>
+    </div>
+  
+</div>        

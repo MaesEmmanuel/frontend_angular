@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { Course } from '../course-form/course.model';
-import { CourseService } from '../course.service';
+import { CourseService } from '../services/course.service';
 import { Router } from '@angular/router';
 
 @Component({

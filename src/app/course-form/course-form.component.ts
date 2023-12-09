@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { Course } from './course.model';
-import { CourseService } from '../course.service';
+import { CourseService } from '../services/course.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -20,8 +20,8 @@ export class CourseFormComponent {
     ){
     this.formCourse = new FormGroup({
       name: new FormControl('',Validators.required),
-      type: new FormControl('',Validators.required),
-      description: new FormControl('',Validators.required)
+      role: new FormControl('',Validators.required),
+      password: new FormControl('',Validators.required)
     });
 
 

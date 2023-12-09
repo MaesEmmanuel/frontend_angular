@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Course } from './course-form/course.model';
+import { Course } from '../course-form/course.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -9,24 +9,25 @@ import { Observable } from 'rxjs';
 export class CourseService {
 
   constructor(private http:HttpClient) { }
-  url : string = "https://localhost:7037/course";
+  host : string = "https://localhost:7037";
 
   Post(course: Course){
-    return this.http.post(this.url,course).subscribe();
+    return this.http.post(`${this.host}/course-form`,course).subscribe();
   }
 
   GetCourseList():Observable<Course[]>{
-    return this.http.get<Course[]>(this.url);
+    console.log(`{host}/course`);
+    return this.http.get<Course[]>(`${this.host}/course`);
   }
-
+  
  // GetCoursebyId():Course{
  //   return this.http.get(this.url,Course.id);
   //}
 
   GetCourseByName(name:string){
-    return this.http.get<Course>(`${this.url}/GetCourseByName?name=${name}`);
+    return this.http.get<Course>(`${this.host}/course/GetCourseByName?name=${name}`);
   }
   DeleteCourseByName(name:string){
-    return this.http.delete(`${this.url}/DeleteCourseByName?name=${name}`);
+    return this.http.delete(`${this.host}/course/DeleteCourseByName?name=${name}`);
   }
 }
