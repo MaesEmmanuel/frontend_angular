@@ -9,10 +9,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CourseFormComponent } from './course-form/course-form.component';
-import { CourseTableComponent } from './course-table/course-table.component';
+import { CourseTableComponent } from './course/course.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
-import { LogoutComponent } from './auth/logout/logout.component';
+
 
 
 
@@ -24,7 +24,7 @@ import { LogoutComponent } from './auth/logout/logout.component';
     CourseTableComponent,
     PageNotFoundComponent,
     LoginComponent,
-    LogoutComponent
+  
   ],
   imports: [
     BrowserModule,

@@ -37,7 +37,7 @@ export class LoginComponent {
       next:(appUser:AppUser)=>{
         this.authService.autenticateUser(appUser).subscribe({
           next:(data:boolean)=>{
-            this.router.navigateByUrl("/course-table");
+            this.router.navigateByUrl("/course");
           }
         })
       },

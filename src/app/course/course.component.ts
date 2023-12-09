@@ -5,9 +5,9 @@ import { CourseService } from '../services/course.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-course-table',
-  templateUrl: './course-table.component.html',
-  styleUrl: './course-table.component.css'
+  selector: 'app-course',
+  templateUrl: './course.component.html',
+  styleUrl: './course.component.css'
 })
 export class CourseTableComponent {
 
