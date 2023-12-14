@@ -5,9 +5,11 @@ import { CourseTableComponent } from './course/course.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
 
+
 const routes: Routes = [
   {path:'', redirectTo:'login', pathMatch:'full'},
   {path:"login", component:LoginComponent},
+  
   {path:"course-form/:name", component: CourseFormComponent},
   {path:"course-form", component: CourseFormComponent},
   {path:"course", component:CourseTableComponent},

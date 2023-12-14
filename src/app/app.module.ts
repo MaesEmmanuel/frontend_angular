@@ -24,6 +24,7 @@ import { LoginComponent } from './login/login.component';
     CourseTableComponent,
     PageNotFoundComponent,
     LoginComponent,
+
   
   ],
   imports: [

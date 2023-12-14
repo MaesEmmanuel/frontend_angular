@@ -20,8 +20,8 @@ export class CourseFormComponent {
     ){
     this.formCourse = new FormGroup({
       name: new FormControl('',Validators.required),
-      role: new FormControl('',Validators.required),
-      password: new FormControl('',Validators.required)
+      type: new FormControl('',Validators.required),
+      description: new FormControl('',Validators.required)
     });
 
 
